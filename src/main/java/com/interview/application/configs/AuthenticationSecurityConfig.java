@@ -49,6 +49,8 @@ public class AuthenticationSecurityConfig {
                 .permitAll()
                 .antMatchers("/actuator/**")
                 .permitAll()
+                .antMatchers(HttpMethod.POST, "/users/reg")
+                .permitAll()
 
 
                 .and()
