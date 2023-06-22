@@ -23,10 +23,6 @@ public class Video {
     private String description;
 
     @Column(nullable = false)
-    @ManyToOne
-    private User owner;
-
-    @Column(nullable = false)
     private Long totalLike;
 
     @Column(nullable = false)
@@ -34,4 +30,8 @@ public class Video {
 
     @Column(nullable = false)
     private Timestamp createdDate;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }

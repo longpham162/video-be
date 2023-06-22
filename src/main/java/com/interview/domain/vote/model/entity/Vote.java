@@ -2,6 +2,7 @@ package com.interview.domain.vote.model.entity;
 
 import com.interview.domain.user.model.entity.User;
 import com.interview.domain.video.model.entity.Video;
+import com.interview.domain.vote.constant.VoteType;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -16,11 +17,15 @@ public class Vote {
     @Id
     private Long id;
 
-    @Column(nullable = false)
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @Column(nullable = false)
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "video_id")
     private Video video;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.ORDINAL)
+    private VoteType voteType;
 }

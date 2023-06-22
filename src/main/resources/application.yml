@@ -7,7 +7,7 @@ spring:
     password: Buskadmin123
     url: jdbc:mariadb://database-1.ci3qe9geixaa.ap-northeast-2.rds.amazonaws.com:3306/busk?useUnicode=yes&characterEncoding=UTF-8
   jpa:
-    generate-ddl: true
+    generate-ddl: false
     open-in-view: true
     show-sql: true
     database: mysql
