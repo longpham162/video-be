@@ -15,6 +15,7 @@ import javax.persistence.*;
 @Entity(name = "test_vote")
 public class Vote {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
