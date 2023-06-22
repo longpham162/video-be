@@ -1,0 +1,23 @@
+server:
+  port: 8080
+##############################################
+spring:
+  datasource:
+    username: admin
+    password: Buskadmin123
+    url: jdbc:mariadb://database-1.ci3qe9geixaa.ap-northeast-2.rds.amazonaws.com:3306/busk?useUnicode=yes&characterEncoding=UTF-8
+  jpa:
+    generate-ddl: true
+    open-in-view: true
+    show-sql: true
+    database: mysql
+##############################################
+jwt:
+  issuer: issuer
+  subject: subject
+  audience: audience
+  audiences: audience
+  expiration: 1440
+  notBefore: 5.0
+  privateKey: private.pem
+  publicKey: public.pem
